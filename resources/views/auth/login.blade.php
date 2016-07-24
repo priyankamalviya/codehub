@@ -6,18 +6,15 @@
         @include('layouts.partials.nav')
 
 
-        {!! Form::open(['route' => 'post_register', 'id' => 'registration-form']) !!}
+        {!! Form::open(['route' => 'post_login', 'id' => 'login-form']) !!}
 
-        {!! Form::label('name','Full Name') !!}
-        {!! Form::text('name',null, ['id'=>'name', 'class' => 'form-control' , 'placeholder' =>'Full Name', 'required']) !!}
-        <br/>
         {!! Form::label('email','Email Address') !!}
         {!! Form::email('email',null, ['id'=>'email', 'class' => 'form-control' , 'placeholder' =>'Email Address', 'required']) !!}
         <br/>
         {!! Form::label('password','Password') !!}
         {!! Form::password('password', ['id'=>'password', 'class' => 'form-control' , 'placeholder' =>'Password', 'required']) !!}
         <br/>
-        {!! Form::button('Register', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
+        {!! Form::button('Log in', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
 
         {!! Form::close() !!}
 

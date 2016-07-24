@@ -28,4 +28,20 @@ Route::group(['prefix' => 'auth'],function(){
         'as' => 'post_register',
         'uses' => 'Auth\AuthController@postRegister'
     ]);
+
+    Route::get('login', [
+        'as' => 'get_login',
+        'uses' => 'Auth\AuthController@getLogin'
+    ]);
+
+    Route::post('login', [
+        'as' => 'post_login',
+        'uses' => 'Auth\AuthController@postLogin'
+    ]);
+
+    Route::get('logout', [
+        'as' => 'get_logout',
+        'uses' => 'Auth\AuthController@getLogout'
+    ]);
+
 });
